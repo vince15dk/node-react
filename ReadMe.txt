@@ -25,3 +25,4 @@ This app is a platfrom or service providing a user to broadcast their ads or ema
           (1) Passport entirely automates OAuth flow, but not the entire project
           (2) inherent confusion and sort of hard to grabs of library structure needs to be resolved
           (3) passport library && paassport strategy libarary(authenticating with one very specific method(email/password, Google, Facebook))
+          
