@@ -9,12 +9,13 @@ passport.serializeUser((user, done)=>{
     done(null, user.id);
 })
 
-passport.deserializeUser(async (id, done)=>{
-    try{
-        const user = await User.findById(user.id);
-        done(null, user);
-    }catch(err){
-    }
+passport.deserializeUser((id, done)=>{
+        User.findById(id).then(user=>{
+            done(null, user);
+        }).catch(err=>{
+            console.log(err);
+        })
+ 
 });
 
 passport.use(
