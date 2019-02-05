@@ -5,6 +5,19 @@ const {googleClientID, googleClientSecret} = require('../config/keys');
 
 const User = mongoose.model('users');
 
+passport.serializeUser((user, done)=>{
+    done(null, user.id);
+})
+
+passport.deserializeUser(async (id, done)=>{
+    try{
+        const user = User.findById(user.id);
+        done(null, user);
+    }catch(err){
+
+    }
+});
+
 passport.use(
     new GoogleStrategy({
     clientID: googleClientID,
