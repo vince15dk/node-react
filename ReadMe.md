@@ -32,4 +32,5 @@ This app is a platfrom or service providing a user to broadcast their ads or ema
         (1) each document hold the data of user
         (2) mongoose wraps the json of mongodb to handle the data 
         (3) mongodb setup remotely via http://www.mLab.com (version 3.6.9 (MMAPv1))
-        
+        (4) all request handled with async and await as heavily as possible
+
