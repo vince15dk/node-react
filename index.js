@@ -11,13 +11,17 @@ passport.use(
     clientID: googleClientID,
     clientSecret: googleClientSecret,
     callbackURL: '/auth/google/callback'
-},(accessToken)=>{
-    console.log(accessToken);
+},(accessToken, refreshToken, profile, done)=>{
+    console.log('access Token', accessToken);
+    console.log('refreshToken', refreshToken);
+    console.log('profile', profile);
 }));
 
 app.get('/auth/google', passport.authenticate('google', {
     scope:['profile', 'email']
 }));
+
+app.get('/auth/google/callback', passport.authenticate('google'))
 
 //https://console.developers.google.com
 const PORT = process.env.PORT || 5000;
@@ -25,8 +29,6 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, ()=>{
     console.log('Server Connected')
 })
-
-
 
 // Since the main goal of using http://localhost:5000/* was to show the redirect error a few lectures later,  we can do one of two things here:
 
