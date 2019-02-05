@@ -26,4 +26,10 @@ This app is a platfrom or service providing a user to broadcast their ads or ema
           (1) Passport entirely automates OAuth flow, but not the entire project
           (2) inherent confusion and sort of hard to grabs of library structure needs to be resolved
           (3) passport library && paassport strategy libarary(authenticating with one very specific method(email/password, Google, Facebook))
-          
+
+3. MongoDB with Mongoose 
+   
+        (1) each document hold the data of user
+        (2) mongoose wraps the json of mongodb to handle the data 
+        (3) mongodb setup remotely via http://www.mLab.com (version 3.6.9 (MMAPv1))
+        
