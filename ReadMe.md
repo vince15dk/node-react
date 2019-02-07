@@ -36,3 +36,11 @@ This app is a platfrom or service providing a user to broadcast their ads or ema
         (5) request => coockie sesssion extracts => passport(pulling info) =>
         deserialize id => add info to req.user
 
+4. Deploy app on both local and heroku variables 
+   
+        (1) local variables with set of google auth keys and db keys
+        (2) heroku environment with set of google auth keys and db keys 
+        (3) commited with gitignoring with very important key values 
+      
+   
+
