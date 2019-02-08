@@ -7,7 +7,6 @@ const {mongoURI, cookieKey} = require('./config/keys');
 require('./models/User');
 require('./services/passport');
 
-
 mongoose.connect(mongoURI);
 const app = express();
 
